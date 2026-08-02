@@ -9,10 +9,10 @@ export default function HomePage() {
         <img
           src="/images/green-nature-bg.png"
           alt=""
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover brightness-[1.25] contrast-[0.95]"
         />
-        {/* Dark green-tinted overlay: vivid nature feel + readable dark text */}
-        <div className="absolute inset-0 bg-gradient-to-b from-forest-900/40 via-forest-800/30 to-forest-900/45" />
+        {/* Soft green-tinted overlay: bright nature feel + readable text */}
+        <div className="absolute inset-0 bg-gradient-to-b from-forest-900/10 via-forest-800/5 to-forest-900/15" />
       </div>
 
       {/* Page content */}
