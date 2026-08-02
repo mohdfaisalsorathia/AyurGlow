@@ -5,13 +5,19 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #FAF7F2;
+    background-color: #1F3822;
     -webkit-tap-highlight-color: transparent;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-size: 16.5px;
+  }
+  @media (min-width: 640px) {
+    html {
+      font-size: 17.5px;
+    }
   }
   body {
-    @apply text-charcoal font-sans antialiased;
+    @apply text-white font-sans antialiased;
     overflow-x: hidden;
   }
   /* Prevent horizontal scroll on mobile */
@@ -25,9 +31,121 @@
     display: block;
     height: 2px;
     width: 3rem;
-    background: linear-gradient(to right, #C4956A, #EDD9C8);
+    background: linear-gradient(to right, #4A7C4A, #8FB88F);
     border-radius: 9999px;
     margin: 1.25rem 0;
+  }
+
+  .nature-gradient {
+    background: linear-gradient(135deg, #1F3822 0%, #2D4F32 30%, #3A6340 60%, #4A7C4A 100%);
+  }
+
+  /* ── Standard glass card ── */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px) saturate(1.5);
+    -webkit-backdrop-filter: blur(20px) saturate(1.5);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  /* ── Liquid glass — premium frosted effect ── */
+  .liquid-glass {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.14) 0%,
+      rgba(255, 255, 255, 0.07) 50%,
+      rgba(143, 184, 143, 0.10) 100%
+    );
+    backdrop-filter: blur(24px) saturate(1.6);
+    -webkit-backdrop-filter: blur(24px) saturate(1.6);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.18),
+      0 2px 8px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.25),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.06);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .liquid-glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 50%;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.10) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  /* ── Dark glass variant ── */
+  .glass-dark {
+    background: rgba(31, 56, 34, 0.60);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    border: 1px solid rgba(143, 184, 143, 0.18);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.22),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  /* ── Image placeholder for products/services ── */
+  .image-placeholder {
+    background: linear-gradient(
+      135deg,
+      rgba(143, 184, 143, 0.12) 0%,
+      rgba(74, 124, 74, 0.08) 50%,
+      rgba(58, 99, 64, 0.12) 100%
+    );
+    border: 1.5px dashed rgba(143, 184, 143, 0.30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .image-placeholder:hover {
+    border-color: rgba(143, 184, 143, 0.50);
+    background: linear-gradient(
+      135deg,
+      rgba(143, 184, 143, 0.18) 0%,
+      rgba(74, 124, 74, 0.12) 50%,
+      rgba(58, 99, 64, 0.18) 100%
+    );
+  }
+
+  .text-gradient-nature {
+    background: linear-gradient(135deg, #3A6340 0%, #4A7C4A 50%, #B8860B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .leaf-decoration::before {
+    content: '🌿';
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0.15;
+  }
+
+  .nature-shadow {
+    box-shadow: 0 8px 32px rgba(74, 124, 74, 0.12), 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  .nature-shadow-lg {
+    box-shadow: 0 16px 48px rgba(74, 124, 74, 0.16), 0 4px 16px rgba(0,0,0,0.06);
   }
 }
 
@@ -37,13 +155,36 @@
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #FAF7F2;
+    background: #1F3822;
   }
   ::-webkit-scrollbar-thumb {
-    background: #C4956A40;
+    background: #8FB88F60;
     border-radius: 999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #C4956A80;
+    background: #4A7C4A80;
   }
+}
+
+/* Floating leaf particles */
+@keyframes leafFall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg) translateX(0);
+    opacity: 0;
+  }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.4; }
+  100% {
+    transform: translateY(110vh) rotate(720deg) translateX(100px);
+    opacity: 0;
+  }
+}
+
+.leaf-particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+  font-size: 1rem;
+  opacity: 0;
+  animation: leafFall linear infinite;
 }

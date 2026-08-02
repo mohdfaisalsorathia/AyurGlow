@@ -1,19 +1,22 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Services from './components/Services'
-import ContactCTA from './components/ContactCTA'
 import Footer from './components/Footer'
+import FloatingLeaves from './components/FloatingLeaves'
+import HomePage from './pages/HomePage'
+import ProductsServices from './pages/ProductsServices'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-cream-100 font-sans">
-      <Navbar />
-      <main>
-        <Hero />
-        <Services />
-        <ContactCTA />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen bg-forest-900 font-sans relative">
+        <FloatingLeaves />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/products-services" element={<ProductsServices />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   )
 }
