@@ -7,12 +7,12 @@ export default function HomePage() {
       {/* Full-page green nature background — darker overlay for readable text */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <img
-          src="/images/green-nature-bg.png"
+          src="/images/uniform-sage-nature-bg.png"
           alt=""
-          className="w-full h-full object-cover brightness-[1.25] contrast-[0.95]"
+          className="w-full h-full object-cover"
         />
-        {/* Soft green-tinted overlay: bright nature feel + readable text */}
-        <div className="absolute inset-0 bg-gradient-to-b from-forest-900/10 via-forest-800/5 to-forest-900/15" />
+        {/* Soft overlay to blend and soften background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-forest-950/15 via-transparent to-sage-950/20" />
       </div>
 
       {/* Page content */}
