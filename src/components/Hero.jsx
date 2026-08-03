@@ -64,21 +64,15 @@ export default function Hero() {
               </div>
             </div>
             
-            {/* Right Column (Doctor Certificate Image) */}
+            {/* Right Column (Logo) */}
             <div className="lg:col-span-5 flex justify-center order-1 lg:order-2">
-              <div className="relative w-full max-w-[340px]">
+              <div className="relative w-full max-w-[280px] sm:max-w-[320px]">
                 {/* Visual Depth Card background */}
-                <div className="absolute inset-0 rounded-3xl bg-white/10 backdrop-blur-[2px] translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4" />
+                <div className="absolute inset-0 rounded-3xl bg-white/10 backdrop-blur-[2px] translate-x-2.5 translate-y-2.5 sm:translate-x-3 sm:translate-y-3" />
                 
-                <div className="relative rounded-3xl border border-white/20 overflow-hidden shadow-2xl aspect-[4/5] w-full">
-                  <img src="/images/doctor.png" alt="Dr. Sana Wanjara — Dermatologist at Ayurglow Skin & Hair Clinic"
-                    className="w-full h-full object-cover object-center" />
-                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-forest-900/50 to-transparent" />
-                </div>
-
-                <div className="absolute -top-2 -right-2 sm:-top-3 sm:-right-4 bg-gradient-to-r from-sage-500 to-forest-500 text-white rounded-lg sm:rounded-xl px-2.5 py-1 sm:px-3 sm:py-1.5 text-[9px] sm:text-[11px] font-medium shadow-md flex items-center gap-1">
-                  <Leaf size={10} />
-                  Board Certified
+                <div className="relative rounded-3xl border border-white/20 overflow-hidden shadow-2xl aspect-square w-full bg-forest-950/40 flex items-center justify-center p-3 sm:p-4">
+                  <img src="/images/LOGO.png" alt="Ayurglow Logo"
+                    className="w-full h-full object-contain rounded-2xl" />
                 </div>
               </div>
             </div>

@@ -29,21 +29,12 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? 'bg-forest-900/75 backdrop-blur-xl shadow-lg border-b border-sage-600/20'
-            : 'bg-transparent'
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 bg-forest-900/80 backdrop-blur-xl shadow-lg border-b border-sage-600/20"
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-gradient-to-br from-sage-400 to-forest-500 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-300">
-              <Leaf size={16} className="text-white sm:w-[18px] sm:h-[18px]" />
-            </div>
-            <div className="flex items-baseline gap-1.5">
-              <span className="font-display text-lg sm:text-xl font-semibold text-white tracking-wide drop-shadow">Ayurglow</span>
-              <span className="text-[9px] sm:text-[10px] text-sage-200/70 font-sans hidden sm:inline tracking-wider uppercase">Skin & Hair</span>
-            </div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-3.5 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group">
+            <img src="/images/LOGO.png" alt="Ayurglow Logo" className="h-9 sm:h-11 w-auto object-contain rounded-lg" />
+            <span className="font-display text-lg sm:text-xl font-semibold text-white tracking-wider uppercase drop-shadow-sm">Ayurglow</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-7">

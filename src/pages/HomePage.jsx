@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <main className="relative">
       {/* Full-page green nature background — darker overlay for readable text */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
+      <div className="fixed-bg-container">
         <img
           src="/images/ayurveda-scenic-bg.jpg"
           alt=""

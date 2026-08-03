@@ -172,14 +172,14 @@ export default function FeaturedProducts() {
             <Leaf size={14} className="text-sage-300" />
             <div className="w-8 h-[1px] bg-sage-300/50" />
           </div>
-          <p className="text-sage-200 text-[10px] sm:text-[11px] font-medium tracking-[0.22em] uppercase mb-2">
+          <p className="italic text-forest-900 font-normal">
             What We Offer
           </p>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight mb-3 drop-shadow-lg">
-            Featured Products &{' '}
-            <em className="italic text-sage-200 font-normal">Services</em>
+            {' '}
+            <em className="italic text-forest-900 font-normal">Products & Services</em>
           </h2>
-          <p className="text-sage-100/80 text-sm sm:text-[15px] max-w-md mx-auto leading-relaxed">
+          <p className="italic text-forest-900 font-normal">
             Handcrafted formulations and holistic treatments for naturally radiant, healthy skin.
           </p>
         </div>

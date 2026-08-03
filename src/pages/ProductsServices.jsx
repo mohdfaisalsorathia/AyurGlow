@@ -124,7 +124,7 @@ export default function ProductsServices() {
   return (
     <div className="min-h-screen relative">
       {/* ── Full-page nature background ── */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
+      <div className="fixed-bg-container">
         <img src="/images/ayurveda-scenic-bg.jpg" alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-forest-950/10 via-transparent to-sage-950/15" />
       </div>
@@ -135,7 +135,7 @@ export default function ProductsServices() {
         <div className="pt-24 sm:pt-28 pb-2 max-w-6xl mx-auto px-4 sm:px-6">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-sage-300 hover:text-white text-sm font-medium transition-colors"
+            className="inline-flex items-center gap-2 text-forest-900 hover:text-forest-950 text-sm font-semibold transition-colors"
           >
             <ArrowRight size={14} className="rotate-180" /> Back to Home
           </Link>
@@ -146,18 +146,18 @@ export default function ProductsServices() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-8 sm:mb-10">
               <div className="inline-flex items-center gap-2 mb-3">
-                <div className="w-8 h-[1px] bg-sage-300/50" />
-                <Leaf size={14} className="text-sage-300" />
-                <div className="w-8 h-[1px] bg-sage-300/50" />
+                <div className="w-8 h-[1px] bg-forest-900/30" />
+                <Leaf size={14} className="text-forest-900" />
+                <div className="w-8 h-[1px] bg-forest-900/30" />
               </div>
-              <p className="text-sage-200 text-[10px] sm:text-[11px] font-medium tracking-[0.22em] uppercase mb-2">
+              <p className="text-forest-900 text-[10px] sm:text-[11px] font-bold tracking-[0.22em] uppercase mb-2">
                 Our Products
               </p>
-              <h2 className="font-display text-3xl sm:text-4xl font-semibold text-white leading-tight mb-2 drop-shadow-lg">
-                Ayurvedic{' '}
-                <em className="italic text-sage-200 font-normal">Essentials</em>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-forest-950 leading-tight mb-2">
+                {' '}
+                <em className="italic text-forest-900 font-normal">Ayurvedic Products</em>
               </h2>
-              <p className="text-sage-100/80 text-sm max-w-md mx-auto leading-relaxed">
+              <p className="text-forest-900/90 text-sm max-w-md mx-auto leading-relaxed font-medium">
                 Handcrafted formulations using pure, ethically-sourced herbs and botanicals.
               </p>
             </div>
@@ -228,18 +228,18 @@ export default function ProductsServices() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-8 sm:mb-10">
               <div className="inline-flex items-center gap-2 mb-3">
-                <div className="w-8 h-[1px] bg-sage-300/50" />
-                <Sparkles size={14} className="text-sage-300" />
-                <div className="w-8 h-[1px] bg-sage-300/50" />
+                <div className="w-8 h-[1px] bg-forest-900/30" />
+                <Sparkles size={14} className="text-forest-900" />
+                <div className="w-8 h-[1px] bg-forest-900/30" />
               </div>
-              <p className="text-sage-200 text-[10px] sm:text-[11px] font-medium tracking-[0.22em] uppercase mb-2">
+              <p className="text-forest-900 text-[10px] sm:text-[11px] font-bold tracking-[0.22em] uppercase mb-2">
                 Our Services
               </p>
-              <h2 className="font-display text-3xl sm:text-4xl font-semibold text-white leading-tight mb-2 drop-shadow-lg">
-                Treatment{' '}
-                <em className="italic text-sage-200 font-normal">Menu</em>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-forest-950 leading-tight mb-2">
+                {' '}
+                <em className="italic text-forest-900 font-normal">Treatment Menu</em>
               </h2>
-              <p className="text-white/90 text-sm max-w-md mx-auto leading-relaxed">
+              <p className="text-forest-900/90 text-sm max-w-md mx-auto leading-relaxed font-medium">
                 Holistic treatments combining ancient Ayurvedic practices with modern clinical expertise.
               </p>
             </div>
@@ -282,12 +282,12 @@ export default function ProductsServices() {
         <section className="py-10 sm:py-14 overflow-hidden">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-8 sm:mb-10">
-              <p className="text-sage-200 text-[10px] sm:text-[11px] font-semibold tracking-[0.22em] uppercase mb-2">
+              <p className="text-forest-900 text-[10px] sm:text-[11px] font-bold tracking-[0.22em] uppercase mb-2">
                 Testimonials
               </p>
-              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold text-white leading-tight drop-shadow-lg">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-forest-950 leading-tight">
                 What Our{' '}
-                <em className="italic text-sage-200 font-normal">Clients Say</em>
+                <em className="italic text-forest-900 font-normal">Clients Say</em>
               </h2>
             </div>
 
