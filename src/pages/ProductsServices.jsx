@@ -125,8 +125,8 @@ export default function ProductsServices() {
     <div className="min-h-screen relative">
       {/* ── Full-page nature background ── */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <img src="/images/uniform-sage-nature-bg.png" alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-forest-950/15 via-transparent to-sage-950/20" />
+        <img src="/images/ayurveda-scenic-bg.jpg" alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest-950/10 via-transparent to-sage-950/15" />
       </div>
 
       {/* ── Page Content ── */}
